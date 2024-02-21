@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Google",
+        "actionUrl": "https://www.google.com/search",
+        "queryParam": "q"
+    },
+    {
+        "name": "Bing",
+        "actionUrl": "https://www.bing.com/search",
+        "queryParam": "q"
+    },
+    {
+        "name": "Yahoo",
+        "actionUrl": "https://search.yahoo.com/search",
+        "queryParam": "p"
+    }
+    // 在此处添加更多网站信息
+]
