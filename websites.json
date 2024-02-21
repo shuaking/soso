@@ -14,5 +14,10 @@
         "actionUrl": "https://search.yahoo.com/search",
         "queryParam": "p"
     }
+    {
+        "name": "baidu",
+        "actionUrl": "https://www.baidu.com/",
+        "queryParam": "p"
+    }
     // 在此处添加更多网站信息
 ]
