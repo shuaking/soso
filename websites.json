@@ -16,8 +16,8 @@
     }
     {
         "name": "baidu",
-        "actionUrl": "https://www.baidu.com/",
-        "queryParam": "p"
-    }
+        "actionUrl": "https://www.baidu.com/search",
+        "queryParam": "q"
+    },
     // 在此处添加更多网站信息
 ]
