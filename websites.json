@@ -10,9 +10,8 @@
         "queryParam": "q"
     },
     {
-        "name": "Yahoo",
-        "actionUrl": "https://search.yahoo.com/search",
-        "queryParam": "p"
+        "name": "新网站",
+        "actionUrl": "https://example.com/search",
+        "queryParam": "query"
     }
-    // 在此处添加更多网站信息
 ]
