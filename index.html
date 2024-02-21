@@ -3,64 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>多功能搜索页面</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            display: flex;
-            flex-direction: row;
-            width: 80%;
-            max-width: 800px;
-            background-color: #ffffff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-        .section {
-            flex: 1;
-            margin-right: 20px;
-        }
-        .section:last-child {
-            margin-right: 0;
-        }
-        h1 {
-            text-align: center;
-            color: #333333;
-            width: 100%;
-        }
-        form {
-            margin-bottom: 20px;
-        }
-        form label, form input[type="text"], form input[type="submit"] {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        form input[type="text"] {
-            padding: 10px;
-            border: 1px solid #cccccc;
-            border-radius: 4px;
-        }
-        form input[type="submit"] {
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        form input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -71,13 +14,13 @@
                 <input type="text" id="google-search" name="q">
                 <input type="submit" value="搜索">
             </form>
-            <!-- 可以在这里添加更多的搜索表单 -->
+            <!-- 更多搜索表单将在这里添加 -->
         </div>
-        <div class="section">
+        <div class="section" id="additional-section">
             <h1>即将添加</h1>
-            <p>这里可以添加更多的搜索引擎或者其他有用的链接。</p>
-            <!-- 新的搜索表单和链接将在这里添加 -->
+            <!-- 新的搜索表单和链接将通过JavaScript动态添加在这里 -->
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
