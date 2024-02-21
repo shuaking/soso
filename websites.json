@@ -13,11 +13,6 @@
         "name": "Yahoo",
         "actionUrl": "https://search.yahoo.com/search",
         "queryParam": "p"
-    },
-    {
-        "name": "baidu",
-        "actionUrl": "https://www.baidu.com/search",
-        "queryParam": "q"
     }
     // 在此处添加更多网站信息
 ]
