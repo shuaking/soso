@@ -1,30 +1,59 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 示例函数，用于添加一个新的搜索表单
-    function addSearchEngine(name, actionUrl, queryParam) {
-        const section = document.getElementById('additional-section');
+    // 使用JSON结构定义网站信息
+    const websitesJSON = [
+        {
+            "name": "Google",
+            "actionUrl": "https://www.google.com/search",
+            "queryParam": "q"
+        },
+        {
+            "name": "Bing",
+            "actionUrl": "https://www.bing.com/search",
+            "queryParam": "q"
+        },
+        {
+            "name": "Yahoo",
+            "actionUrl": "https://search.yahoo.com/search",
+            "queryParam": "p"
+        }
+        // 在此处添加更多网站信息
+    ];
+
+    // 函数：根据网站信息添加搜索表单
+    function addSearchForm(website) {
+        const container = document.getElementById('additional-section'); // 获取存放表单的容器
+
+        // 创建表单元素
         const form = document.createElement('form');
-        form.action = actionUrl;
-        form.method = 'get';
-        form.target = '_blank';
-        
+        form.setAttribute('action', website.actionUrl);
+        form.setAttribute('method', 'get');
+        form.setAttribute('target', '_blank');
+
+        // 创建标签
         const label = document.createElement('label');
-        label.textContent = name + '搜索：';
-        
+        label.textContent = website.name + " 搜索：";
+
+        // 创建文本输入框
         const inputText = document.createElement('input');
-        inputText.type = 'text';
-        inputText.name = queryParam;
-        
-        const submitBtn = document.createElement('input');
-        submitBtn.type = 'submit';
-        submitBtn.value = '搜索';
-        
+        inputText.setAttribute('type', 'text');
+        inputText.setAttribute('name', website.queryParam);
+
+        // 创建提交按钮
+        const submitButton = document.createElement('input');
+        submitButton.setAttribute('type', 'submit');
+        submitButton.setAttribute('value', '搜索');
+
+        // 将元素添加到表单中
         form.appendChild(label);
         form.appendChild(inputText);
-        form.appendChild(submitBtn);
-        
-        section.appendChild(form);
+        form.appendChild(submitButton);
+
+        // 将表单添加到页面上
+        container.appendChild(form);
     }
-    
-    // 调用函数来添加新的搜索表单，例如：
-    // addSearchEngine('DuckDuckGo', 'https://duckduckgo.com/', 'q');
+
+    // 遍历定义的网站JSON数组，并为每个网站添加搜索表单
+    websitesJSON.forEach(function(website) {
+        addSearchForm(website);
+    });
 });
